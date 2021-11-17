@@ -19,41 +19,41 @@
 		default_layer {
 // ---------------------------------------------------------------------------------------------------------------------------------
 // |  ESC  |  Q  |  W  |  E   |  R   |  T   |                                          |  Y   |  U    |  I    |  O   |   P   |   \  |
-// |  TAB  |  A  |  S  |  D   |  F   |  G   |                                          |  H   |  J    |  K    |  L   |   ;   |   '  |
-// | SHIFT |  Z  |  X  |  C   |  V   |  B   | L SHIFT | LOWER |  |  RAISE  | L SHIFT |  N   |  M    |  ,    |  .   |   /   | CTRL |
-//                     | GUI  | DEL  | RET  |  SPACE  | LCMD  |  |   RET   |  SPACE  | TAB  | BSPC  | R-ALT |
+// |  BS   |  A  |  S  |  D   |  F   |  G   |                                          |  H   |  J    |  K    |  L   |   ;   |   '  |
+// | SHIFT |  Z  |  X  |  C   |  V   |  B   |  TILDE  | LOWER |    |  RAISE  | L SHIFT |  N   |  M    |  ,    |  .   |   /   |MINUS |
+//                     |  LC  | ALT  |LOWER |  SPACE  | LCMD  |    |   RET   |  RET  | TAB  | BSPC  | R-ALT |
 			bindings = <
 	&kp ESC   &kp Q &kp W &kp E &kp R &kp T                                                &kp Y &kp U  &kp I     &kp O   &kp P    &kp BSLH
 	&kp TAB   &kp A &kp S &kp D &kp F &kp G                                                &kp H &kp J  &kp K     &kp L   &kp SEMI &kp SQT
-	&kp LSHFT &kp Z &kp X &kp C &kp V &kp B &kp LSHFT &mo LOWER        &mo RAISE &kp LSHFT &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp RCTRL
-	                 &kp LGUI &kp DEL &kp RET &kp SPACE &kp LCMD        &kp RET  &kp SPACE  &kp TAB &kp BSPC &kp RALT
+	&kp LSHFT &kp Z &kp X &kp C &kp V &kp B   &kp TILDE &kp TAB         &mo RAISE &kp LSHFT &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp MINUS
+	                 &kp LC &kp DEL &mo LOWER &kp SPACE &kp LCMD        &mo RAISE  &kp RET  &kp TAB &kp BSPC &kp RALT
 			>;
 		};
 
 		lower_layer {
 // ---------------------------------------------------------------------------------------------------------------------------------
-// |  ESC  |  Q  |  W  |  {   |  }   |  T   |                                          |  Y   |  U    |  I    |  O   |   P   |   \  |
-// |  TAB  |  A  |  S  |  (   |  )   |  G   |                                          |  H   |  J    |  K    |  L   |   ;   |   '  |
-// | SHIFT |  Z  |  X  |  [   |  ]   |  B   | L SHIFT | LOWER |    | L SHIFT | L SHIFT |  N   |  M    |  ,    |  .   |   /   | CTRL |
+// |  ESC  |  Q  |  W  |  {   |  }   |  T   |                                          |  Y   |  7    |  8    |  9   |   P   |   \  |
+// |  TAB  |  A  |  S  |  (   |  )   |  G   |                                          |  H   |  4    |  5    |  6   |  EQL  |   '  |
+// | SHIFT |  Z  |  X  |  [   |  ]   |  B   | L SHIFT | LOWER |    | L SHIFT | L SHIFT |  0   |  1    |  2    |  3   |   /   | CTRL |
 //                     | LGUI | DEL  | RET  |  SPACE  |  ESC  |    |   RET   |  SPACE  | TAB  | BSPC  | R-ALT |
 			bindings = <
-	&kp ESC   &kp Q &kp W &kp LBRC &kp RBRC &kp T                                                &kp Y &kp U  &kp I     &kp O   &kp P    &kp BSLH
-	&kp TAB   &kp A &kp S &kp LPAR &kp RPAR &kp G                                                &kp H &kp J  &kp K     &kp L   &kp SEMI &kp SQT
-	&kp LSHFT &kp Z &kp X &kp LBKT &kp RBKT &kp B &kp LSHFT &mo LOWER        &kp LSHFT &kp LSHFT &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp RCTRL
+	&kp ESC   &kp Q &kp W &kp LBRC &kp RBRC &kp T                                                &kp Y  &kp N7  &kp N8  &kp N9   &kp P    &kp BSLH
+	&kp TAB   &kp A &kp S &kp LPAR &kp RPAR &kp G                                                &kp H  &kp N4  &kp N5  &kp N6   &kp EQL  &kp SQT
+	&kp LSHFT &kp Z &kp X &kp LBKT &kp RBKT &kp B &kp TILDE &mo LOWER        &kp LSHFT &kp LSHFT &kp N0 &kp N1  &kp N2  &kp N3   &kp FSLH &kp RCTRL
 	                 &kp LGUI &kp DEL &kp RET &kp SPACE &kp LCMD       &kp RET  &kp SPACE  &kp TAB &kp BSPC &kp RALT
 			>;
 		};
 
 		raise_layer {
 // ---------------------------------------------------------------------------------------------------------------------------------
-// |  ESC  |  1  |  2  |  3   |  4   |  5   |                                                |  Y   |  U    |  I    |  O   |   P   |   \  |
-// |  TAB  |  A  |  S  |  (   |  )   |  G   |                                                |  H   |  J    |  K    |  L   |   ;   |   '  |
+// |  ESC  |  1  |  2  |  UP  |  4   |  5   |                                                 |PG_UP |  7    |  8    |  9   |   0   |  EQL |
+// |  TAB  |  A  |LEFT | DOWN |RIGHT |  G   |                                                 |PG_DN |  J    |  K    |  L   |   ;   |   '  |
 // | SHIFT |  Z  |  X  |  [   |  ]   |  B   | L SHIFT | LOWER |           | L SHIFT | L SHIFT |  N   |  M    |  ,    |  .   |   /   | CTRL |
 //                  | BT_CLR  | BT_PRV | BT_NXT |  SPACE  |   ESC   |  |   RET   |  SPACE  | TAB  | BSPC  | R-ALT |
 			bindings = <
-	&kp ESC   &kp N1 &kp N2 &kp N3 &kp N4 &kp N5                                                &kp Y &kp U  &kp I     &kp O   &kp P    &kp BSLH
-	&kp TAB   &kp A &kp S &kp LPAR &kp RPAR &kp G                                                &kp H &kp J  &kp K     &kp L   &kp SEMI &kp SQT
-	&kp LSHFT &kp Z &kp X &kp LBKT &kp RBKT &kp B &kp LSHFT &mo LOWER        &kp LSHFT &kp LSHFT &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp RCTRL
+	&kp ESC   &kp N1 &kp N2   &kp UP   &kp N4    &kp N5                                               &kp PG_UP &kp N7 &kp N8   &kp N9  &kp N0   &kp EQL
+	&kp TAB   &kp A  &kp LEFT &kp DOWN &kp RIGHT &kp G                                                &kp PG_DN &kp J  &kp K     &kp L   &kp SEMI &kp SQT
+	&kp LSHFT &kp Z  &kp X    &kp LBKT &kp RBKT  &kp B &kp LSHFT &mo LOWER     &kp LSHFT &kp LSHFT &kp N     &kp M  &kp COMMA &kp DOT &kp FSLH &kp RCTRL
 	                 &bt BT_CLR &bt BT_PRV &bt BT_NXT &kp SPACE &kp LCMD       &kp RET  &kp SPACE  &kp TAB &kp BSPC &kp RALT
 			>;
 		};
