@@ -32,15 +32,15 @@
 
 		lower_layer {
 // ---------------------------------------------------------------------------------------------------------------------------------
-// |  ESC  |  Q  |  W  |  {   |  }   |  T   |                                          |  Y   |  7    |  8    |  9   |   P   |   \  |
-// |  TAB  |  A  |  S  |  (   |  )   |  G   |                                          |  H   |  4    |  5    |  6   |  EQL  |   '  |
-// | SHIFT |  Z  |  X  |  [   |  ]   |  B   | L SHIFT | LOWER |    | L SHIFT | L SHIFT |  0   |  1    |  2    |  3   |   /   | CTRL |
-//                     | LGUI | DEL  | RET  |  SPACE  |  ESC  |    |   RET   |  SPACE  | TAB  | BSPC  | R-ALT |
+// |  ESC  |  (  |  :  |  UP  |  =   |  )   |                                          |  Y   |  7    |  8    |  9   |   P   |   \  |
+// |  TAB  |  A  |LEFT | DOWN |RIGHT |  G   |                                          |  H   |  4    |  5    |  6   |  EQL  |   '  |
+// | SHIFT |  {  |  }  |  #   |  [   |  ]   | L SHIFT | LOWER |    | L SHIFT | L SHIFT |  0   |  1    |  2    |  3   |   /   | CTRL |
+//                  | BT_CLR  | BT_PRV | BT_NXT |  SPACE  |   ESC  |   RET   |  SPACE  | TAB  | BSPC  | R-ALT |
 			bindings = <
-	&kp ESC   &kp Q &kp W &kp LBRC &kp RBRC &kp T                                                &kp Y  &kp N7  &kp N8  &kp N9   &kp P    &kp BSLH
-	&kp TAB   &kp A &kp S &kp LPAR &kp RPAR &kp G                                                &kp H  &kp N4  &kp N5  &kp N6   &kp EQL  &kp SQT
-	&kp LSHFT &kp Z &kp X &kp LBKT &kp RBKT &kp B &kp TILDE &mo LOWER        &kp LSHFT &kp LSHFT &kp N0 &kp N1  &kp N2  &kp N3   &kp FSLH &kp RCTRL
-	                 &kp LGUI &kp DEL &kp RET &kp SPACE &kp LCMD       &kp RET  &kp SPACE  &kp TAB &kp BSPC &kp RALT
+	&kp ESC   &kp LPAR &kp COLON &kp UP  &kp EQL   &kp RPAR                                             &kp Y  &kp N7  &kp N8  &kp N9  &kp P    &kp BSLH
+	&kp TAB   &kp A    &kp LEFT  &kp DOWN &kp RIGHT &kp G                                               &kp H  &kp N4  &kp N5  &kp N6  &kp EQL  &kp SQT
+	&kp LSHFT &kp LBRC &kp RBRC  &kp HASH &kp LBKT  &kp RBKT &kp LSHFT &mo LOWER    &kp LSHFT &kp LSHFT &kp N0 &kp N1  &kp N2  &kp N3  &kp FSLH &kp RCTRL
+	                 &bt BT_CLR &bt BT_PRV &bt BT_NXT &kp SPACE &kp LCMD            &kp RET  &kp SPACE  &kp TAB &kp BSPC &kp RALT
 			>;
 		};
 
