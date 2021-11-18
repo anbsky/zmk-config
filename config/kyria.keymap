@@ -18,15 +18,15 @@
 
 		default_layer {
 // ---------------------------------------------------------------------------------------------------------------------------------
-// |  ESC  |  Q  |  W  |  E   |  R   |  T   |                                          |  Y   |  U    |  I    |  O   |   P   |   \  |
-// |  BS   |  A  |  S  |  D   |  F   |  G   |                                          |  H   |  J    |  K    |  L   |   ;   |   '  |
-// | SHIFT |  Z  |  X  |  C   |  V   |  B   |  TILDE  | LOWER |    |  RAISE  | L SHIFT |  N   |  M    |  ,    |  .   |   /   |MINUS |
-//                     | LCTL | LALT  |LOWER |  SPACE  | LCMD |    |   RAISE   |  RET  | TAB  |  {[   |  }]   |
+// |  ESC  |  Q  |  W  |  E   |  R   |  T   |                                            |  Y   |  U    |  I    |  O   |   P   |   \  |
+// |  BS   |  A^1  |  S  |  D   |  F   |  G   |                                          |  H   |  J    |  K    |  L   |   ;   |   '  |
+// | SHIFT |  Z  |  X  |  C   |  V   |  B   |  TILDE  | LOWER |      |  RAISE  | L SHIFT |  N   |  M    |  ,    |  .   |   /   |MINUS |
+//                     | LCTL | LALT  |LOWER |  SPACE  | LCMD |      |   RAISE   |  RET  | TAB  |  {[   |  }]   |
 			bindings = <
-	&kp ESC   &kp Q &kp W &kp E &kp R &kp T                                                &kp Y &kp U  &kp I     &kp O   &kp P    &kp BSLH
-	&kp BSPC  &kp A &kp S &kp D &kp F &kp G                                                &kp H &kp J  &kp K     &kp L   &kp SEMI &kp SQT
-	&kp LSHFT &kp Z &kp X &kp C &kp V &kp B   &kp TILDE &kp TAB         &mo RAISE &kp LSHFT &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp MINUS
-                  &kp LCTL &kp LALT &mo LOWER &kp SPACE &kp LCMD        &mo RAISE  &kp RET  &kp TAB &kp LBKT &kp RBKT
+	&kp ESC   &kp Q       &kp W &kp E &kp R &kp T                                                &kp Y &kp U  &kp I     &kp O   &kp P    &kp BSLH
+	&kp BSPC  &lt LOWER A &kp S &kp D &kp F &kp G                                                &kp H &kp J  &kp K     &kp L   &kp SEMI &kp SQT
+	&kp LSHFT &kp Z &kp X &kp C &kp V &kp B   &kp TILDE &kp TAB              &mo RAISE &kp LSHFT &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp MINUS
+                  &kp LCTL &kp LALT &mo LOWER &kp SPACE &kp LCMD             &mo RAISE  &kp RET  &kp TAB &kp LBKT &kp RBKT
 			>;
 		};
 
