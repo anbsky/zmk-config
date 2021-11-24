@@ -21,12 +21,12 @@
 // |  ESC  |  Q  |  W  |  E   |  R   |  T   |                                            |  Y   |  U    |  I    |  O   |   P   |MINUS |
 // |  BS   |  A^1  |  S  |  D   |  F   |  G   |                                          |  H   |  J    |  K    |  L   |   ;   |   '  |
 // | SHIFT |  Z  |  X  |  C   |  V   |  B     |  TILDE | TAB  |      |  LOWER    | LSHFT |  N   |  M    |  ,    |  .   |   /   |   \  |
-//                     | LCTL | LALT  | SPACE | LOWER  | LCMD |      |   RAISE   |  RET  | TAB  |  {[   |  }]   |
+//                     | LCTL | LALT  | LOWER |  SPACE | LCMD |      |   RAISE   |  RET  | TAB  |  {[   |  }]   |
 			bindings = <
 	&kp ESC   &kp Q       &kp W &kp E &kp R &kp T                                                &kp Y &kp U  &kp I     &kp O   &kp P    &kp MINUS
 	&kp BSPC  &lt LOWER A &kp S &kp D &kp F &kp G                                                &kp H &kp J  &kp K     &kp L   &kp SEMI &kp SQT
 	&kp LSHFT &kp Z &kp X &kp C &kp V &kp B   &kp TILDE &kp TAB              &mo LOWER &kp LSHFT &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp BSLH
-                  &kp LCTL &kp LALT &kp SPACE &mo LOWER &kp LCMD             &mo RAISE  &kp RET  &kp TAB &kp LBKT &kp RBKT
+                  &kp LCTL &kp LALT &mo LOWER &kp SPACE &kp LCMD             &mo RAISE  &kp RET  &kp TAB &kp LBKT &kp RBKT
 			>;
 		};
 
@@ -35,12 +35,12 @@
 // |  ESC  |  (  |  :  |  UP  |  =   |  )   |                                          |  Y   |  7    |  8    |  9   |   P   |   \  |
 // |  TAB  |  ,  |LEFT | DOWN |RIGHT |  .   |                                          |  H   |  4    |  5    |  6   |  EQL  |   '  |
 // | SHIFT |  {  |  }  |  *   |  [   |  ]   | RAISE   | TAB   |    | LOWER   | L SHIFT |  0   |  1    |  2    |  3   |   /   | CTRL |
-//             | BT_CLR  | BT_PRV | SPACE   |  LOWER  | LCMD  |    |  RCMD   |  SPACE  | TAB  | BSPC  | R-ALT |
+//             | BT_CLR  | BT_PRV |  LOWER  |  SPACE  | LCMD  |    |  RCMD   |  SPACE  | TAB  | BSPC  | R-ALT |
 			bindings = <
 	&kp ESC   &kp LPAR     &kp COLON &kp UP   &kp EQL   &kp RPAR                                              &kp Y  &kp N7  &kp N8  &kp N9  &kp P    &kp BSLH
 	&kp TAB   &kp KP_COMMA &kp LEFT  &kp DOWN &kp RIGHT &kp KP_DOT                                            &kp H  &kp N4  &kp N5  &kp N6  &kp EQL  &kp SQT
 	&kp LSHFT &kp LBRC     &kp RBRC  &kp STAR &kp LBKT  &kp RBKT  &mo RAISE &kp TAB       &mo LOWER &kp RSHFT &kp N0 &kp N1  &kp N2  &kp N3  &kp FSLH &kp RCTRL
-	                              &kp COMMA &kp LALT &kp SPACE &mo LOWER &kp LCMD      &kp RCMD  &kp SPACE &kp TAB       &kp BSPC &kp RALT
+	                              &kp COMMA &kp LALT &mo LOWER &kp SPACE &kp LCMD      &kp RCMD  &kp SPACE &kp TAB       &kp BSPC &kp RALT
 			>;
 		};
 
