@@ -68,7 +68,6 @@
 	                 &bt BT_CLR &bt BT_PRV &bt BT_NXT &kp SPACE &kp LCMD     &trans &kp SPACE &kp C_MUTE      &kp BSPC &kp RALT
 			>;
 		};
-	};
 
 		adjust_layer {
 // ---------------------------------------------------------------------------------------------------------------------------------
