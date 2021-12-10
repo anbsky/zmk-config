@@ -30,7 +30,7 @@
 		default_layer {
 // ---------------------------------------------------------------------------------------------------------------------------------
 // |  ESC  |  Q  |  W  |  E   |  R   |  T   |                                            |  Y   |  U    |  I    |  O   |   P   |MINUS |
-// |  BSPC  |  A^1  |  S  |  D   |  F   |  G   |                                         |  H   |  J    |  K    |  L   |   ;   |   '  |
+// |  BSPC |  A  |  S  |  D   |  F   |  G   |                                         |  H   |  J    |  K    |  L   |   ;   |   '  |
 // | SHIFT |  Z  |  X  |  C   |  V   |  B     |  GRAVE | EQL  |      |  LOWER    | LSHFT |  N   |  M    |  ,    |  .   |   /   |   \  |
 //                     | LCTL | LALT  | LOWER |  SPACE | LCMD |      |   TAB     |  RET  | RAISE|  {[   |  }]   |
 			bindings = <
@@ -48,9 +48,9 @@
 // | SHIFT |  ^  |  #   |   [   |   ] |  !   | RAISE  | TAB   |    |         | LOWER   |    INS   |      |   ,  |   .  |   /   | CTRL |
 //             | BT_CLR  | BT_PRV |  LOWER  |  SPACE  | LCMD  |    |         |         | RET      |      |      |
 			bindings = <
-	&kp GRAVE &kp AT   &kp AMPS  &kp LPAR   &kp RPAR   &kp STAR                                   &kp PG_UP &kp LA(LEFT) &kp HOME    &kp END   &kp LA(RIGHT) &kp BSLH
-	&kp TAB   &kp DLLR &kp PRCNT &kp LBRC   &kp RBRC   &kp EQL                                    &kp PG_DN &kp LEFT     &kp DOWN    &kp UP    &kp RIGHT     &kp SQT
-	&kp LSHFT &kp CARET &kp HASH &kp LBKT   &kp RBKT   &kp EXCL &mo RAISE &trans   &trans  &trans &kp INS   &trans      &kp KP_COMMA &kp KP_DOT &trans        &kp RCTRL
+	&kp GRAVE &kp AT   &kp AMPS  &kp LPAR   &kp RPAR   &kp STAR                                   &kp PG_UP &kp LA(LEFT) &kp HOME   &kp END        &kp LA(RIGHT) &kp BSLH
+	&kp TAB   &kp DLLR &kp PRCNT &kp LBRC   &kp RBRC   &kp EQL                                    &kp PG_DN &kp LEFT     &kp DOWN   &kp UP         &kp RIGHT     &kp SQT
+	&kp LSHFT &kp CARET &kp HASH &kp LBKT   &kp RBKT   &kp EXCL &mo RAISE &trans   &trans  &trans &kp INS   &trans       &kp KP_DOT &kp LS(KP_DOT) &kp RCTRL
 	                                 &trans  &trans    &trans   &trans &trans      &trans  &trans &trans   &trans &trans
 			>;
 		};
