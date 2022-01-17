@@ -46,10 +46,10 @@
 // | SHIFT |  Z  |  X  |  C   |  V   |  B    |  GRAVE | EQL  |      |  LOWER    | LSHFT |  N   |  M    |  ,    |  .   |   /   |   \  |
 //                     | LCTL | LALT | LOWER |  SPACE | LCMD |      |   TAB     |  RET  | RAISE|  {[   |  }]   |
 			bindings = <
-	&kp ESC   &kp Q &kp W &kp E &kp R &kp T                                                &kp Y     &kp U    &kp I     &kp O   &kp P    &kp MINUS
-	&kp BSPC  &kp A &kp S &kp D &kp F &kp G                                                &kp H     &kp J    &kp K     &kp L   &kp SEMI &kp SQT
-	&kp LSHFT &hm LCTRL Z &kp X &kp C &kp V &kp B   &kp GRAVE &kp EQL              &sl LOWER &kp LSHFT &kp N     &kp M    &kp COMMA &kp DOT &kp FSLH &kp BSLH
-                  &kp LCTL &kp LALT &mo LOWER &kp SPACE &kp LCMD             &kp TAB   &kp RET   &mo RAISE &kp LBKT &kp RBKT
+	&kp ESC   &kp Q &kp W &kp E &kp R &kp T                                                                 &kp Y    &kp U       &kp I      &kp O      &kp P          &kp MINUS
+	&kp BSPC  &hm LCTRL A &hm LALT S &hm LCMD D &hm LSHFT F &kp G                                           &kp H    &hm RSHFT J &hm RCMD K &hm RALT L &hm RCTRL SEMI &kp SQT
+	&kp LSHFT &hm LCTRL Z &kp X      &kp C      &kp V       &kp B &kp GRAVE &kp EQL     &sl LOWER &kp LSHFT &kp N    &kp M       &kp COMMA  &kp DOT    &kp FSLH       &kp BSLH
+                  &kp LCTL &kp LALT &mo LOWER &kp SPACE &kp LCMD                        &kp TAB   &kp RET   &mo RAISE &kp LBKT &kp RBKT
 			>;
 		};
 
