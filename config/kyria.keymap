@@ -29,27 +29,27 @@
 
 		default_layer {
 // ---------------------------------------------------------------------------------------------------------------------------------
-// |  ESC  |  Q  |  W  |  E   |  R   |  T   |                                            |  Y   |  U    |  I    |  O   |   P   |MINUS |
-// |  BSPC |  A  |  S  |  D   |  F   |  G   |                                         |  H   |  J    |  K    |  L   |   ;   |   '  |
-// | SHIFT |  Z  |  X  |  C   |  V   |  B     |  GRAVE | EQL  |      |  LOWER    | LSHFT |  N   |  M    |  ,    |  .   |   /   |   \  |
-//                     | LCTL | LALT  | LOWER |  SPACE | LCMD |      |   TAB     |  RET  | RAISE|  {[   |  }]   |
+// |  ESC  |  Q  |  W  |  E   |  R   |  T    |                                          |  Y   |  U    |  I    |  O   |   P   |MINUS |
+// |  BSPC |  A  |  S  |  D   |  F   |  G    |                                          |  H   |  J    |  K    |  L   |   ;   |   '  |
+// | SHIFT |  Z  |  X  |  C   |  V   |  B    |  GRAVE | EQL  |      |  LOWER    | LSHFT |  N   |  M    |  ,    |  .   |   /   |   \  |
+//                     | LCTL | LALT | LOWER |  SPACE | LCMD |      |   TAB     |  RET  | RAISE|  {[   |  }]   |
 			bindings = <
 	&kp ESC   &kp Q &kp W &kp E &kp R &kp T                                                &kp Y     &kp U    &kp I     &kp O   &kp P    &kp MINUS
 	&kp BSPC  &kp A &kp S &kp D &kp F &kp G                                                &kp H     &kp J    &kp K     &kp L   &kp SEMI &kp SQT
-	&kp LSHFT &kp Z &kp X &kp C &kp V &kp B   &kp GRAVE &kp EQL              &sl LOWER &kp LSHFT &kp N     &kp M    &kp COMMA &kp DOT &kp FSLH &kp BSLH
+	&kp LSHFT &th_hold LCTL Z &kp X &kp C &kp V &kp B   &kp GRAVE &kp EQL              &sl LOWER &kp LSHFT &kp N     &kp M    &kp COMMA &kp DOT &kp FSLH &kp BSLH
                   &kp LCTL &kp LALT &mo LOWER &kp SPACE &kp LCMD             &kp TAB   &kp RET   &mo RAISE &kp LBKT &kp RBKT
 			>;
 		};
 
 		lower_layer {
 // ---------------------------------------------------------------------------------------------------------------------------------
-// | GRAVE |  @  |  &   |   (   |   ) |  *   |                                         |  PG_UP   | LAL  | HOME |  END | LAR   |   \  |
-// | TAB   |  $  |  %   |   {   |   } |  =   |                                         |  PG_DN   | LEFT | DOWN |  UP  | RIGHT |   '  |
+// | GRAVE |  @  |  &   |   {   |   } |  *   |                                         |  PG_UP   | LAL  | HOME |  END | LAR   |   \  |
+// | TAB   |  $  |  %   |   (   |   ) |  =   |                                         |  PG_DN   | LEFT | DOWN |  UP  | RIGHT |   '  |
 // | SHIFT |  ^  |  #   |   [   |   ] |  !   | RAISE  | TAB   |    |         | LOWER   |    INS   |      |   ,  |   .  |   /   | CTRL |
 //             | BT_CLR  | BT_PRV |  LOWER  |  SPACE  | LCMD  |    |         |         | RET      |      |      |
 			bindings = <
-	&kp GRAVE &kp AT   &kp AMPS  &kp LPAR   &kp RPAR   &kp STAR                                   &kp PG_UP &kp LA(LEFT) &kp HOME   &kp END        &kp LA(RIGHT) &kp BSLH
-	&kp TAB   &kp DLLR &kp PRCNT &kp LBRC   &kp RBRC   &kp EQL                                    &kp PG_DN &kp LEFT     &kp DOWN   &kp UP         &kp RIGHT     &kp SQT
+	&kp GRAVE &kp AT   &kp AMPS  &kp LBRC   &kp RBRC   &kp STAR                                   &kp PG_UP &kp LA(LEFT) &kp HOME   &kp END        &kp LA(RIGHT) &kp BSLH
+	&kp TAB   &kp DLLR &kp PRCNT &kp LPAR   &kp RPAR   &kp EQL                                    &kp PG_DN &kp LEFT     &kp DOWN   &kp UP         &kp RIGHT     &kp SQT
 	&kp LSHFT &kp CARET &kp HASH &kp LBKT   &kp RBKT   &kp EXCL &mo RAISE &trans   &trans  &trans &kp INS   &trans       &kp KP_DOT &kp LS(KP_DOT) &kp RCTRL
 	                                 &trans  &trans    &trans   &trans &trans      &trans  &trans &trans   &trans &trans
 			>;
