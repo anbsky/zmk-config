@@ -9,15 +9,15 @@
 #include <dt-bindings/zmk/bt.h>
 
 #define DEFAULT 0
-#define LOWER   1
-#define RAISE   2
+#define LSYN    1
+#define LNUM    2
 #define ADJUST  3
 
 / {
     conditional_layers {
         compatible = "zmk,conditional-layers";
         tri_layer {
-            if-layers = <LOWER RAISE>;
+            if-layers = <LSYN LNUM>;
             then-layer = <ADJUST>;
         };
     };
@@ -43,40 +43,40 @@
 // ---------------------------------------------------------------------------------------------------------------------------------
 // |  ESC  |  Q  |  W  |  E   |  R   |  T    |                                          |  Y   |  U    |  I    |  O   |   P   |MINUS |
 // |  BSPC |  A  |  S  |  D   |  F   |  G    |                                          |  H   |  J    |  K    |  L   |   ;   |   '  |
-// | SHIFT |  Z  |  X  |  C   |  V   |  B    |  GRAVE | EQL  |      |  LOWER    | LSHFT |  N   |  M    |  ,    |  .   |   /   |   \  |
-//                     | LCTL | LALT | LOWER |  SPACE | LCMD |      |   TAB     |  RET  | RAISE|  {[   |  }]   |
+// | SHIFT |  Z  |  X  |  C   |  V   |  B    |  GRAVE | EQL  |      |  LSYN    | LSHFT |  N   |  M    |  ,    |  .   |   /   |   \  |
+//                     | LCTL | LALT | LSYN | SPACE | LCMD |      |   TAB     |  RET  | LNUM|  {[   |  }]   |
 			bindings = <
 	&kp ESC   &kp Q &kp W &kp E &kp R &kp T                                                                 &kp Y    &kp U       &kp I      &kp O      &kp P          &kp MINUS
 	&kp BSPC  &hm LCTRL A &hm LALT S &hm LCMD D &hm LSHFT F &kp G                                           &kp H    &hm RSHFT J &hm RCMD K &hm RALT L &hm RCTRL SEMI &kp SQT
-	&kp LSHFT &hm LCTRL Z &kp X      &kp C      &kp V       &kp B     &kp GRAVE       &kp EQL     &sl LOWER &kp LSHFT &kp N    &kp M       &kp COMMA  &kp DOT    &kp FSLH       &kp BSLH
-                                     &kp LCTL   &kp LALT    &mo LOWER &hm LOWER SPACE &kp LCMD    &kp TAB   &kp RET   &mo RAISE &kp LBKT &kp RBKT
+	&kp LSHFT &hm LCTRL Z &kp X      &kp C      &kp V       &kp B     &kp GRAVE       &kp EQL     &sl LSYN &kp LSHFT &kp N    &kp M       &kp COMMA  &kp DOT    &kp FSLH       &kp BSLH
+                                     &kp LCTL   &kp LALT    &mo LSYN &hm LNUM SPACE   &kp LCMD    &kp TAB   &kp RET   &mo LNUM &kp LBKT &kp RBKT
 			>;
 		};
 
-		lower_layer {
+		sym_layer {
 // ---------------------------------------------------------------------------------------------------------------------------------
 // | GRAVE |  @  |  &   |   {   |   } |  *   |                                         |  PG_UP   | LAL  | HOME |  END | LAR   |   \  |
 // | TAB   |  $  |  %   |   (   |   ) |  =   |                                         |  PG_DN   | LEFT | DOWN |  UP  | RIGHT |   '  |
-// | SHIFT |  ^  |  #   |   [   |   ] |  !   | RAISE  | TAB   |    |         | LOWER   |    INS   |      |   ,  |   .  |   /   | CTRL |
-//             | BT_CLR  | BT_PRV |  LOWER  |  SPACE  | LCMD  |    |         |         | RET      |      |      |
+// | SHIFT |  ^  |  #   |   [   |   ] |  !   | LNUM  | TAB   |    |         | LSYN   |    INS   |      |   ,  |   .  |   /   | CTRL |
+//             | BT_CLR  | BT_PRV |  LSYN  |  SPACE  | LCMD  |    |         |         | RET      |      |      |
 			bindings = <
 	&kp GRAVE &kp AT   &kp AMPS  &kp LBRC   &kp RBRC   &kp STAR                                   &kp PG_UP &kp LA(LEFT) &kp HOME   &kp END        &kp LA(RIGHT) &kp BSLH
 	&kp TAB   &kp DLLR &kp PRCNT &kp LPAR   &kp RPAR   &kp EQL                                    &kp PG_DN &kp LEFT     &kp DOWN   &kp UP         &kp RIGHT     &kp SQT
-	&kp LSHFT &kp CARET &kp HASH &kp LBKT   &kp RBKT   &kp EXCL &mo RAISE &trans   &trans  &trans &kp INS   &trans       &kp KP_DOT &kp LS(KP_DOT) &kp RCTRL
+	&kp LSHFT &kp CARET &kp HASH &kp LBKT   &kp RBKT   &kp EXCL &mo LNUM &trans   &trans  &trans &kp INS   &trans       &kp KP_DOT &kp LS(KP_DOT) &kp RCTRL
 	                                 &trans  &trans    &trans   &trans &trans      &trans  &trans &trans   &trans &trans
 			>;
 		};
 
-		raise_layer {
+		LNUM_layer {
 // ---------------------------------------------------------------------------------------------------------------------------------
 // |  ESC  |     |  7 |  8 |  9  |      |                                                   | C_VOL_UP |  F7   |  F8  |  F9  |  F12  |      |
 // |  TAB  |     |  4 |  5 |  6  |      |                                                   | C_VOL_DN |  F4   |  F5  |  F6  |  F11  |      |
-// | SHIFT |     |  1 |  2 |  3  |  0   | L SHIFT | LOWER |                | LOWER  |       |  C_MUTE  |  F1   |  F2  |  F3  |  F10  |      |
+// | SHIFT |     |  1 |  2 |  3  |  0   | L SHIFT | LSYN |                | LSYN  |       |  C_MUTE  |  F1   |  F2  |  F3  |  F10  |      |
 //               |    |    |     |      |   SPACE |   ESC   |           | C_MUTE | SPACE |          | BSPC  |      |
 			bindings = <
 	&kp ESC   &none &kp N7 &kp N8 &kp N9 &none                                               &kp C_VOL_UP &kp F7  &kp F8  &kp F9 &kp F12  &none
 	&kp TAB   &none &kp N4 &kp N5 &kp N6 &none                                               &kp C_VOL_DN &kp F4  &kp F5  &kp F6 &kp F11  &none
-	&kp LSHFT &none &kp N1 &kp N2 &kp N3 &kp N0 &kp LSHFT &mo LOWER          &trans &trans    &kp C_MUTE   &kp F1  &kp F2  &kp F3 &kp F10  &none
+	&kp LSHFT &none &kp N1 &kp N2 &kp N3 &kp N0 &kp LSHFT &mo LSYN          &trans &trans    &kp C_MUTE   &kp F1  &kp F2  &kp F3 &kp F10  &none
 	                        &none &none &trans  &kp SPACE &kp LCMD           &trans &kp SPACE &trans   &kp BSPC &none
 			>;
 		};
@@ -85,12 +85,12 @@
 // ---------------------------------------------------------------------------------------------------------------------------------
 // |  ESC  |  F1 |  F2 |  F3  |  F4  |  F5  |                                                 |C_VOL_UP |  7    |  8    |  9   |  F10  |  F11 |
 // |  TAB  | BT0 | BT1 | BT2  |  BT3 |  G   |                                                 |C_VOL_DN |  4    |  5    |  6   |   ;   |  F12 |
-// | SHIFT |  Z  |  X  |  [   |  ]   |  B   | L SHIFT | LOWER |           | L SHIFT | L SHIFT |     0   |  1    |  2    |  3   |   /   | CTRL |
+// | SHIFT |  Z  |  X  |  [   |  ]   |  B   | L SHIFT | LSYN |           | L SHIFT | L SHIFT |     0   |  1    |  2    |  3   |   /   | CTRL |
 //            | BT_CLR  | BT_PRV | BT_NXT |  SPACE  |   ESC   |           |   RET   |  SPACE  | C_MUTE  | BSPC  | R-ALT |
 			bindings = <
 	&kp ESC   &kp F1 &kp F2   &kp F3   &kp F4    &kp F5                                          &kp C_VOL_UP    &kp N7   &kp N8  &kp N9  &kp F10  &kp F11
 	&kp TAB   &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &kp G                          &kp C_VOL_DN    &kp N4   &kp N5  &kp N6  &kp SEMI &kp F12
-	&kp LSHFT &kp Z  &kp X    &kp LBKT &kp RBKT  &kp B &kp LSHFT &mo LOWER   &kp LSHFT &kp LSHFT &kp N0          &kp N1   &kp N2  &kp N3  &none    &kp RCTRL
+	&kp LSHFT &kp Z  &kp X    &kp LBKT &kp RBKT  &kp B &kp LSHFT &mo LSYN   &kp LSHFT &kp LSHFT &kp N0          &kp N1   &kp N2  &kp N3  &none    &kp RCTRL
 	                 &bt BT_CLR &bt BT_PRV &bt BT_NXT &kp SPACE &kp LCMD     &kp RET  &kp SPACE  &kp C_MUTE   &kp BSPC &kp RALT
 			>;
 		};
