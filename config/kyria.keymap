@@ -43,13 +43,13 @@
 // ---------------------------------------------------------------------------------------------------------------------------------
 // |  ESC  |  Q  |  W  |  E   |  R   |  T    |                                          |  Y   |  U    |  I    |  O   |   P   |MINUS |
 // |  BSPC |  A  |  S  |  D   |  F   |  G    |                                          |  H   |  J    |  K    |  L   |   ;   |   '  |
-// | SHIFT |  Z  |  X  |  C   |  V   |  B    |  GRAVE | EQL  |      |  LSYN    | LSHFT |  N   |  M    |  ,    |  .   |   /   |   \  |
-//                     | LCTL | LALT | LSYN | SPACE | LCMD |      |   TAB     |  RET  | LNUM|  {[   |  }]   |
+// | SHIFT |  Z  |  X  |  C   |  V   |  B    |  GRAVE | RET  |      |  LSYN    | LSHFT |  N   |  M    |  ,    |  .   |   /   |   \  |
+//                     | LNUM | LALT | LSYN | SPACE | LCMD |      |   TAB     |  RET  | LNUM|  {[   |  }]   |
 			bindings = <
 	&kp ESC   &kp Q &kp W &kp E &kp R &kp T                                                                 &kp Y    &kp U       &kp I      &kp O      &kp P          &kp MINUS
 	&kp BSPC  &hm LCTRL A &hm LALT S &hm LCMD D &hm LSHFT F &kp G                                           &kp H    &hm RSHFT J &hm RCMD K &hm RALT L &hm RCTRL SEMI &kp SQT
-	&kp LSHFT &hm LCTRL Z &kp X      &kp C      &kp V       &kp B     &kp GRAVE       &kp EQL     &sl LSYN &kp LSHFT &kp N    &kp M       &kp COMMA  &kp DOT    &kp FSLH       &kp BSLH
-                                     &kp LCTL   &kp LALT    &mo LSYN &hm LNUM SPACE   &kp LCMD    &kp TAB   &kp RET   &mo LNUM &kp LBKT &kp RBKT
+	&kp LSHFT &hm LCTRL Z &kp X      &kp C      &kp V       &kp B    &kp GRAVE &kp RET      &sl LSYN &kp LSHFT &kp N    &kp M       &kp COMMA  &kp DOT    &kp FSLH       &kp BSLH
+                                     &mo LNUM   &kp LALT    &mo LSYN  &kp SPACE &kp LCMD     &kp TAB   &kp RET   &mo LNUM &kp LBKT &kp RBKT
 			>;
 		};
 
@@ -67,7 +67,7 @@
 			>;
 		};
 
-		LNUM_layer {
+		num_layer {
 // ---------------------------------------------------------------------------------------------------------------------------------
 // |  ESC  |     |  7 |  8 |  9  |      |                                                   | C_VOL_UP |  F7   |  F8  |  F9  |  F12  |      |
 // |  TAB  |     |  4 |  5 |  6  |      |                                                   | C_VOL_DN |  F4   |  F5  |  F6  |  F11  |      |
