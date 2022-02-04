@@ -85,23 +85,23 @@
 // | SHIFT |     |  1 |  2 |  3  |  0   | L SHIFT | LOWER |                | LOWER  |       |  C_MUTE  |  F1   |  F2  |  F3  |  F10  |      |
 //               |    |    |     |      |   SPACE | LCMD |               |   TAB  | SPACE |   BSPC  | BSPC  |      |
 			bindings = <
-	&kp ESC   &bt BT_CLR &kp N7 &kp N8 &kp N9 &none                                               &kp C_VOL_UP &kp F7  &kp F8  &kp F9 &kp F12  &none
-	&kp TAB   &bt BT_NXT &kp N4 &kp N5 &kp N6 &none	                                              &kp C_VOL_DN &kp F4  &kp F5  &kp F6 &kp F11  &none
-	&kp LSHFT &bt BT_PRV &kp N1 &kp N2 &kp N3 &kp N0 &kp LSHFT &mo LOWER          &trans &trans    &kp C_MUTE   &kp F1  &kp F2  &kp F3 &kp F10  &none
+	&kp ESC   &none &kp N7 &kp N8 &kp N9 &none                                               &kp C_VOL_UP &kp F7  &kp F8  &kp F9 &kp F12  &none
+	&kp TAB   &none &kp N4 &kp N5 &kp N6 &none	                                              &kp C_VOL_DN &kp F4  &kp F5  &kp F6 &kp F11  &none
+	&kp LSHFT &none &kp N1 &kp N2 &kp N3 &kp N0 &kp LSHFT &mo LOWER          &trans &trans    &kp C_MUTE   &kp F1  &kp F2  &kp F3 &kp F10  &none
 	                &trans &trans &trans  &trans       &trans           &trans &kp SPACE &trans   &kp BSPC &none
 			>;
 		};
 
 		adjust_layer {
 // ---------------------------------------------------------------------------------------------------------------------------------
-// |  ESC  |  F1 |  F2 |  F3  |  F4  |  F5  |                                                 |C_VOL_UP |  7    |  8    |  9   |  F10  |  ON |
-// |  TAB  | BT0 | BT1 | BT2  |  BT3 |  G   |                                                 |C_VOL_DN |  4    |  5    |  6   |   ;   |  OFF |
-// | SHIFT |  Z  |  X  |  [   |  ]   |  B   | L SHIFT | LOWER |           | L SHIFT | L SHIFT |     0   |  1    |  2    |  3   |   /   | CTRL |
-//            | BT_CLR  | BT_PRV | BT_NXT |  SPACE  |   ESC   |           |   TAB   |  SPACE  | C_MUTE  | BSPC  | R-ALT |
+// |  ESC  |BTCLR|  F2 |  F3  |  F4  | VOL_UP |                                                 |C_VOL_UP |  7    |  8    |  9   |  F10  |  ON |
+// |  TAB  |BTNXT|     |      |      | VOL_DN |                                                 |C_VOL_DN |  4    |  5    |  6   |   ;   |  OFF |
+// | SHIFT |BTPRV|BTP1 | BTP2 | BTP3 |  MUTE  | L SHIFT | LOWER |           | L SHIFT | L SHIFT |     0   |  1    |  2    |  3   |   /   | CTRL |
+//            |        |      |      |  SPACE |   ESC   |                |   TAB   |  SPACE  | C_MUTE  | BSPC  | R-ALT |
 			bindings = <
-	&kp ESC   &kp F1 &kp F2   &kp F3   &kp F4    &kp F5                                                     &kp C_VOL_UP &kp N7   &kp N8  &kp N9  &kp F10  &ext_power EP_ON
-	&kp TAB   &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &kp G                                     &kp C_VOL_DN &kp N4   &kp N5  &kp N6  &kp SEMI &ext_power EP_OFF
-	&kp LSHFT &bt BT_CLR &bt BT_PRV &bt BT_NXT &kp RBKT  &kp B  &kp LSHFT  &mo LOWER    &kp LSHFT &kp LSHFT  &kp N0       &kp N1   &kp N2  &kp N3  &none    &kp RCTRL
+	&kp ESC   &bt BT_CLR &kp F2   &kp F3   &kp F4    &kp F5                                                     &kp C_VOL_UP &kp N7   &kp N8  &kp N9  &kp F10  &ext_power EP_ON
+	&kp TAB   &bt BT_NXT &none        &none        &none        &none                                &kp C_VOL_DN &kp N4   &kp N5  &kp N6  &kp SEMI &ext_power EP_OFF
+	&kp LSHFT &bt BT_PRV &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &kp LSHFT  &mo LOWER    &kp LSHFT &kp LSHFT  &kp N0       &kp N1   &kp N2  &kp N3  &none    &kp RCTRL
 	                     &trans     &trans     &trans    &trans &trans     &kp RET     &kp SPACE &kp C_MUTE &kp BSPC &kp RALT
 			>;
 		};
