@@ -66,13 +66,14 @@
 // |  BSPC |  A  |  S  |  D   |  F    |  G    |                                                                |  H   |  J    |  K    |  L   |   ;   |   '  |
 // | SHIFT |  Z  |  X  |  C   |  V    |  B    |  GRAVE | RET  |                                |  PGDN  | PGUP |  N   |  M    |  ,    |  .   |   /   |   \  |
 //                     | NAVI | LCMD | RAISE  | SPACE  | DEL  |                                |   TAB  |  RET | RAISE|  {[   |  }]   |
-			bindings = <
-	&kp ESC   &kp Q        &kp W       &kp E       &kp R        &kp T                                             &kp Y     &kp U        &kp I       &kp O       &kp P           &kp MINUS
-	&kp BSPC  &bhm LCTRL A &bhm LALT S &bhm LCMD D &bhm LSHFT F &kp G                                             &kp H     &bhm RSHFT J &bhm RCMD K &bhm RALT L &bhm RCTRL SEMI &kp SQT
-	&kp LSHFT &kp Z        &kp X       &kp C       &kp V        &kp B     &kp GRAVE &kp RET     &kp HOME &kp END  &kp N     &kp M        &kp COMMA   &kp DOT     &kp FSLH        &kp BSLH
-                                       &mo NAVI    &kp LCMD     &mo RAISE &kp SPAC  &kp DEL     &kp TAB  &kp RET  &mo LOWER &kp LBKT     &kp RBKT
-			>;
-		};
+          bindings = <
+   &kp ESC   &kp Q        &kp W       &kp E       &kp R        &kp T                                             &kp Y     &kp U        &kp I       &kp O       &kp P           &kp BSPC
+   &kp TAB   &hm LCTRL A  &bhm LALT S &bhm LCMD D &bhm LSHFT F &kp G                                             &kp H     &bhm RSHFT J &bhm RCMD K &bhm RALT L &bhm RCTRL SEMI &kp SQT
+   &kp LSHFT &kp Z        &kp X       &kp C       &kp V        &kp B     &kp GRAVE &kp RET     &kp HOME &kp END  &kp N     &kp M        &kp COMMA   &kp DOT     &kp FSLH        &kp BSLH
+                                      &mo NAVI    &kp LCMD     &mo RAISE &kp SPAC  &kp DEL     &kp TAB  &kp RET  &mo LOWER &kp LBKT     &kp RBKT
+             >;
+        };
+
 
 		lower_layer {
 // ---------------------------------------------------------------------------------------------------------------------------------
