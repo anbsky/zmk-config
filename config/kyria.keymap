@@ -41,7 +41,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "HOMEROW_MODS";
             #binding-cells = <2>;
-            tapping-term-ms = <200>;    // <---[[moderate duration]]
+            tapping-term-ms = <250>;    // <---[[moderate duration]]
             quick-tap-ms = <0>;
             flavor = "balanced";
             bindings = <&kp>, <&kp>;
@@ -62,57 +62,57 @@
 
 		default_layer {
 // ---------------------------------------------------------------------------------------------------------------------------------
-// |  ESC  |  Q  |  W  |  E   |  R   |  T    |                                          |  Y   |  U    |  I    |  O   |   P   |MINUS |
-// |  BSPC |  A  |  S  |  D   |  F   |  G    |                                          |  H   |  J    |  K    |  L   |   ;   |   '  |
-// | SHIFT |  Z  |  X  |  C   |  V   |  B    |  GRAVE | RET  |      |  LOWER    | LSHFT |  N   |  M    |  ,    |  .   |   /   |   \  |
-//                     | RAISE | LALT | LOWER | SPACE   | LCMD |      |   TAB     |  RET  | RAISE|  {[   |  }]   |
+// |  ESC  |  Q  |  W  |  E   |  R    |  T    |                                                                |  Y   |  U    |  I    |  O   |   P   |MINUS |
+// |  BSPC |  A  |  S  |  D   |  F    |  G    |                                                                |  H   |  J    |  K    |  L   |   ;   |   '  |
+// | SHIFT |  Z  |  X  |  C   |  V    |  B    |  GRAVE | RET  |                                |  PGDN  | PGUP |  N   |  M    |  ,    |  .   |   /   |   \  |
+//                     | NAVI | LCMD | RAISE  | SPACE  | DEL  |                                |   TAB  |  RET | RAISE|  {[   |  }]   |
 			bindings = <
-	&kp ESC  &kp Q &kp W &kp E      &kp R      &kp T                                                             &kp Y   &kp U       &kp I      &kp O      &kp P          &kp MINUS
-	&kp BSPC &bhm LCTRL A &bhm LALT S &bhm LCMD D &bhm LSHFT F &kp G                                             &kp H   &bhm RSHFT J &bhm RCMD K &bhm RALT L &bhm RCTRL SEMI &kp SQT
-	&hm LSHFT GRAVE &kp Z &kp X      &kp C      &kp V       &kp B      &kp GRAVE       &kp RET         &sl LOWER &kp LSHFT &kp N   &kp M       &kp COMMA  &kp DOT    &kp FSLH       &kp BSLH
-                                     &mo NAVI   &kp LALT    &mo LOWER &lt RAISE SPACE &kp LCMD     &kp TAB  &kp RET   &mo RAISE &kp LBKT    &kp RBKT
+	&kp ESC   &kp Q        &kp W       &kp E       &kp R        &kp T                                             &kp Y     &kp U        &kp I       &kp O       &kp P           &kp MINUS
+	&kp BSPC  &bhm LCTRL A &bhm LALT S &bhm LCMD D &bhm LSHFT F &kp G                                             &kp H     &bhm RSHFT J &bhm RCMD K &bhm RALT L &bhm RCTRL SEMI &kp SQT
+	&kp LSHFT &kp Z        &kp X       &kp C       &kp V        &kp B     &kp GRAVE &kp RET     &kp HOME &kp END  &kp N     &kp M        &kp COMMA   &kp DOT     &kp FSLH        &kp BSLH
+                                       &mo NAVI    &kp LCMD     &mo RAISE &kp SPAC  &kp DEL     &kp TAB  &kp RET  &mo LOWER &kp LBKT     &kp RBKT
 			>;
 		};
 
-		sym_layer {
+		lower_layer {
 // ---------------------------------------------------------------------------------------------------------------------------------
-// | GRAVE |  @  |  &   |   {   |   } |  *   |                                         |  PG_UP   | LAL  | HOME |  END | LAR   |   \  |
-// | TAB   |  $  |  %   |   (   |   ) |  =   |                                         |  PG_DN   | LEFT | DOWN |  UP  | RIGHT |   '  |
-// | SHIFT |  ^  |  #   |   [   |   ] |  !   | RAISE  | TAB   |    |         | LOWER   |    INS   |      |   ,  |   .  |   /   | CTRL |
-//             | BT_CLR  | BT_PRV |  LOWER  |  SPACE  | LCMD  |    |         |         | RET      |      |      |
+// |  ESC  |     |     |  7 |  8 |  9  |                                                   |     | HOME  | PGDN   | PGUP   | END    |    _   |
+// |  TAB  |     |     |  4 |  5 |  6  |                                                   |     | LEFT  | DOWN   |  UP    | RIGHT  |    -   |
+// | SHIFT |     |  0  |  1 |  2 |  3  |          |       |               |        |       |     |  MUTE |  VOLUP |  VOLDN |  >/||  |  CTRL  |
+//               |     |    |    |     |          |       |               |        |       |     |       |        |        |
 			bindings = <
-	&kp GRAVE &kp AT   &kp AMPS  &kp LBRC   &kp RBRC   &kp STAR                                   &kp PG_UP &kp LA(LEFT) &kp HOME   &kp END        &kp LA(RIGHT) &kp BSLH
-	&kp TAB   &kp DLLR &kp PRCNT &kp LPAR   &kp RPAR   &kp EQL                                    &kp PG_DN &kp LEFT     &kp DOWN   &kp UP         &kp RIGHT     &kp SQT
-	&kp LSHFT &kp CARET &kp HASH &kp LBKT   &kp RBKT   &kp EXCL &mo RAISE &trans   &trans  &trans &kp INS   &trans       &kp KP_DOT &kp LS(KP_DOT) &kp RCTRL
-	                                 &trans  &trans    &trans   &trans &trans      &trans  &trans &trans   &trans &trans
+	&kp ESC   &none &none  &kp N7 &kp N8 &kp N9                                       &trans &kp HOME   &kp PG_DN    &kp PG_UP    &kp END   &kp UNDERSCORE
+	&kp LCTRL &none &none  &kp N4 &kp N5 &kp N6	                                      &trans &kp LEFT   &kp DOWN     &kp UP       &kp RIGHT &kp MINUS
+	&kp LSHFT &none &kp N0 &kp N1 &kp N2 &kp N3 &trans  &trans          &trans &trans &trans &kp C_MUTE &kp C_VOL_DN &kp C_VOL_UP &kp C_PP  &kp RCTRL
+	                       &trans &trans &trans &trans &trans          &trans &trans &trans &trans     &trans
 			>;
 		};
 
-		num_layer {
+		raise_layer {
 // ---------------------------------------------------------------------------------------------------------------------------------
-// |  ESC  |     |     |  7 |  8 |  9  |                                                         | C_VOL_UP |  F7   |  F8  |  F9  |  F12  |      |
-// |  TAB  |     |     |  4 |  5 |  6  |                                                         | C_VOL_DN |  F4   |  F5  |  F6  |  F11  |      |
-// | SHIFT |     |  0  |  1 |  2 |  3  |  L SHIFT | LOWER |                | LOWER  |       |  C_MUTE  |  F1   |  F2  |  F3  |  F10  |      |
-//               |     |    |    |     |   SPACE  |  LCMD |               |   TAB  | SPACE |   BSPC  | BSPC  |      |
+// | GRAVE |  1  |  2   |   3   |   4    |  5     |                                         |   6   |   7  |   8   |   9   |   0   |   _  |
+// | TAB   |  (  |  =   |   :   |   *    |  )     |                                         | PG_DN | LEFT | DOWN |  UP  | RIGHT |   -  |
+// | SHIFT |  [  |  ]   |   !   |   {    |  }     | RAISE  | TAB   |    |         | LOWER   |    INS   |      |   ,  |   .  |   /   | CTRL |
+//             | BT_CLR | BT_PRV | LOWER |  SPACE | LCMD  |    |         |         | RET      |      |      |
 			bindings = <
-	&kp ESC   &none &none  &kp N7 &kp N8 &kp N9                                                &kp C_VOL_UP &kp F7  &kp F8  &kp F9 &kp F12  &none
-	&kp TAB   &none &none  &kp N4 &kp N5 &kp N6	                                              &kp C_VOL_DN &kp F4  &kp F5  &kp F6 &kp F11  &none
-	&kp LSHFT &none &kp N0 &kp N1 &kp N2 &kp N3 &kp LSHFT &mo LOWER          &trans &trans    &kp C_MUTE   &kp F1  &kp F2  &kp F3 &kp F10  &none
-	                &trans &trans &trans  &trans       &trans           &trans &kp SPACE &trans   &kp BSPC &none
+	&kp GRAVE &kp N1   &kp N2   &kp N3    &kp N4   &kp N5                                          &kp N6     &kp N7         &kp N8    &kp N9     &kp N0    &kp UNDERSCORE
+	&kp TAB   &kp LPAR &kp EQL  &kp COLON &kp STAR &kp RPAR                                        &kp PG_DN  &kp LEFT       &kp DOWN  &kp UP     &kp RIGHT &kp MINUS
+	&kp LSHFT &kp LBKT &kp RBKT &kp LBKT  &kp LBRC &kp RBRC &mo RAISE &trans    &kp LBKT  &kp RBKT &kp KP_DOT &kp LS(KP_DOT) &kp PG_DN &kp PG_UP  &trans    &trans
+	                             &trans   &trans   &trans   &trans    &trans      &trans  &trans   &trans     &trans         &trans
 			>;
 		};
 
 		adjust_layer {
 // ---------------------------------------------------------------------------------------------------------------------------------
-// |  ESC  |BTCLR|  F2 |  F3  |  F4  | VOL_UP |                                                 |C_VOL_UP |  7    |  8    |  9   |  F10  |  ON |
-// |  TAB  |BTNXT|     |      |      | VOL_DN |                                                 |C_VOL_DN |  4    |  5    |  6   |   ;   |  OFF |
-// | SHIFT |BTPRV|BTP1 | BTP2 | BTP3 |  MUTE  | L SHIFT | LOWER |           | L SHIFT | L SHIFT |     0   |  1    |  2    |  3   |   /   | CTRL |
-//            |        |      |      |  SPACE |   ESC   |                |   TAB   |  SPACE  | C_MUTE  | BSPC  | R-ALT |
+// |  ESC  |BTCLR|  F2 |  F3  |  F4  | VOL_UP |                                                 | BT+ |      |      |      |     | BTCLR |
+// |  TAB  |BTNXT|     |      |      | VOL_DN |                                                 | BT- |  ^   |      |      |     |       |
+// | SHIFT |BTPRV|BTP1 | BTP2 | BTP3 |  MUTE  | L SHIFT | LOWER |           |         |         | BT0 |  BT1 |  BT2 |  BT3 |     |       |
+//            |        |      |      |  SPACE |   ESC   |                   |         |         |     |      |      |
 			bindings = <
-	&kp ESC   &bt BT_CLR &kp F2   &kp F3   &kp F4    &kp F5                                                         &kp C_VOL_UP &kp N7   &kp N8  &kp N9  &kp F10  &ext_power EP_ON
-	&kp TAB   &bt BT_NXT &none        &none        &none        &none                                               &kp C_VOL_DN &kp N4   &kp N5  &kp N6  &kp SEMI &ext_power EP_OFF
-	&kp LSHFT &bt BT_PRV &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &trans  &trans    &kp LSHFT &kp LSHFT  &kp N0       &kp N1   &kp N2  &kp N3  &none    &kp RCTRL
-	                     &trans     &trans     &trans                         &trans &trans    &kp RET   &kp SPACE  &kp C_MUTE   &kp BSPC &kp RALT
+	&kp GRAVE &trans &trans &trans &trans &trans                                        &bt BT_NXT   &none        &none        &none        &none &bt BT_CLR
+	&kp LCTRL &trans &trans &trans &trans &trans                                        &bt BT_PRV   &kp C_MUTE   &kp C_VOL_DN &kp C_VOL_UP &none &none
+	&kp LSHFT &trans &trans &trans &trans &trans &trans  &trans           &trans &trans &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &none &none
+	                        &trans &trans &trans &trans &trans            &trans &trans &trans &trans &trans
 			>;
 		};
 
