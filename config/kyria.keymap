@@ -26,6 +26,30 @@
 };
 
 / {
+    macros {
+        tmux_next: tmux_next {
+            label = "ZM_tmux_next";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTRL>
+                , <&macro_tap &kp B>
+                , <&macro_release &kp LCTRL>
+				, <&macro_tap &kp N>
+                ;
+        };
+		tmux_prev: tmux_prev {
+            label = "ZM_tmux_prev";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTRL>
+                , <&macro_tap &kp B>
+                , <&macro_release &kp LCTRL>
+				, <&macro_tap &kp P>
+                ;
+        };
+    };
 
 	behaviors {
         hm: homerow_mods {
@@ -120,15 +144,15 @@
 
 		navi_layer {
 // ---------------------------------------------------------------------------------------------------------------------------------
-// |  ESC  |     | HOME|  ⬆️   | END |     |                                                    | C_VOL_UP |  F7   |  F8  |  F9  |  F12  |      |
-// |  TAB  |     |  ⬅️ |  ⬇️   |  ➡️  |     |                                                   | C_VOL_DN |  F4   |  F5  |  F6  |  F11  |      |
-// | SHIFT |     |     |      |     |     |          |       |                | LOWER  |       |  C_MUTE  |  F1   |  F2  |  F3  |  F10  |      |
-//               |     |      |     |     |          |       |               |   TAB  | SPACE |   BSPC  | BSPC  |      |
+// |  ESC  |     | HOME|  ⬆️   | END |       |                                                    | C_VOL_UP |  F7   |  F8  |  F9  |  F12  |      |
+// |  TAB  |     |  ⬅️ |  ⬇️   |  ➡️  |       |                                                   | C_VOL_DN |  F4   |  F5  |  F6  |  F11  |      |
+// | SHIFT |     |     |      |     |        |          |       |                |        |       |  C_MUTE  |  F1   |  F2  |  F3  |  F10  |      |
+//               |     |      |     |  TM-P  |   TM-N    |       |               |        |       |         |        |      |
 			bindings = <
-	&kp ESC   &none &kp HOME &kp UP   &kp END   &none                                                &kp C_VOL_UP &kp F7  &kp F8  &kp F9 &kp F12  &none
-	&kp TAB   &none &kp LEFT &kp DOWN &kp RIGHT &none	                                              &kp C_VOL_DN &kp F4  &kp F5  &kp F6 &kp F11  &none
-	&kp LSHFT &none &none    &none    &none     &none &trans  &trans           &trans &trans    &kp C_MUTE   &kp F1  &kp F2  &kp F3 &kp F10  &none
-	                &trans &trans &trans               &trans &trans           &trans &kp SPACE &trans   &kp BSPC &none
+	&kp ESC   &none &kp HOME &kp UP   &kp END    &none                                             &kp C_VOL_UP &kp F7  &kp F8  &kp F9 &kp F12  &none
+	&kp TAB   &none &kp LEFT &kp DOWN &kp RIGHT  &none	                                           &kp C_VOL_DN &kp F4  &kp F5  &kp F6 &kp F11  &none
+	&kp LSHFT &none &none    &none    &none      &none      &trans  &trans           &trans &trans &kp C_MUTE   &kp F1  &kp F2  &kp F3 &kp F10  &none
+	                &trans   &trans              &tmux_prev &tmux_next &trans        &trans &trans &trans       &trans  &none
 			>;
 		};
 	};
