@@ -82,10 +82,10 @@
 // | SHIFT |     |  0  |  1 |  2 |  3  |          |       |               |        |       |     |  MUTE |  VOLUP |  VOLDN |  >/||  |  CTRL  |
 //               |     |    |    |     |          |       |               |        |       |     |       |        |        |
 			bindings = <
-	&kp ESC   &none &none  &kp N7 &kp N8 &kp N9                                       &trans &kp HOME   &kp PG_DN    &kp PG_UP    &kp END   &kp UNDERSCORE
-	&kp LCTRL &none &none  &kp N4 &kp N5 &kp N6	                                      &trans &kp LEFT   &kp DOWN     &kp UP       &kp RIGHT &kp MINUS
-	&kp LSHFT &none &kp N0 &kp N1 &kp N2 &kp N3 &trans  &trans          &trans &trans &trans &kp C_MUTE &kp C_VOL_DN &kp C_VOL_UP &kp C_PP  &kp RCTRL
-	                       &trans &trans &trans &trans &trans          &trans &trans &trans &trans     &trans
+	&kp ESC   &none &none  &kp N7 &kp N8 &kp N9                                            &trans   &kp HOME &kp PG_DN  &kp PG_UP      &kp END   &kp UNDERSCORE
+	&kp LCTRL &none &none  &kp N4 &kp N5 &kp N6	                                           &trans   &kp LEFT &kp DOWN   &kp UP         &kp RIGHT &kp MINUS
+	&kp LSHFT &none &kp N0 &kp N1 &kp N2 &kp N3 &trans  &trans         &kp PG_DN &kp PG_UP &kp LBKT &kp RBKT &kp KP_DOT &kp LS(KP_DOT) &kp C_PP  &kp RCTRL
+	                       &trans &trans &trans &trans &trans          &kp PG_DN &kp PG_UP &trans   &trans     &trans
 			>;
 		};
 
@@ -96,9 +96,9 @@
 // | SHIFT |  [  |  ]   |   !   |   {    |  }     | RAISE  | TAB   |    |         | LOWER   |    INS   |      |   ,  |   .  |   /   | CTRL |
 //             | BT_CLR | BT_PRV | LOWER |  SPACE | LCMD  |    |         |         | RET      |      |      |
 			bindings = <
-	&kp GRAVE &kp N1   &kp N2   &kp N3    &kp N4   &kp N5                                          &kp N6     &kp N7         &kp N8    &kp N9     &kp N0    &kp UNDERSCORE
-	&kp BSPC  &kp LPAR &kp EQUAL  &kp COLON &kp STAR &kp RPAR                                        &kp PG_DN  &kp LEFT       &kp DOWN  &kp UP     &kp RIGHT &kp MINUS
-	&kp LSHFT &kp LBKT &kp RBKT &kp LBKT  &kp LBRC &kp RBRC &mo RAISE &trans    &kp LBKT  &kp RBKT &kp KP_DOT &kp LS(KP_DOT) &kp PG_DN &kp PG_UP  &trans    &trans
+	&kp GRAVE &kp N1   &kp N2   &kp N3    &kp N4   &kp N5                                          &kp N6     &kp N7     &kp N8    &kp N9     &kp N0    &kp UNDERSCORE
+	&kp BSPC  &kp LPAR &kp EQUAL  &kp COLON &kp STAR &kp RPAR                                      &kp PG_DN  &kp LEFT   &kp DOWN  &kp UP     &kp RIGHT &kp MINUS
+	&kp LSHFT &kp LBKT &kp RBKT &kp LBKT  &kp LBRC &kp RBRC &mo RAISE &trans      &trans  &trans   &trans     &trans     &kp PG_DN &kp PG_UP  &trans    &trans
 	                             &trans   &trans   &trans   &trans    &trans      &trans  &trans   &trans     &trans         &trans
 			>;
 		};
