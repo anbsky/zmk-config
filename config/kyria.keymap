@@ -93,6 +93,16 @@
             flavor = "balanced";
             bindings = <&kp>, <&kp>;
         };
+
+        qt: quick_tap {
+            compatible = "zmk,behavior-hold-tap";
+            label = "QUICK_TAP";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <250>;
+            quick-tap-ms = <125>;
+            bindings = <&kp>, <&kp>;
+        };
     };
 
     combos {
@@ -114,10 +124,10 @@
 // | SHIFT |  Z  |  X  |  C   |  V    |  B    |  GRAVE | RET  |                                |  PGDN  | PGUP |  N   |  M    |  ,    |  .   |   /   |   \  |
 //                     | NAVI | LCMD | RAISE  | SPACE  | DEL  |                                |   TAB  |  RET | RAISE|  {[   |  }]   |
           bindings = <
-   &kp ESC   &kp Q       &kp W       &kp E       &kp R        &kp T                                	                   &kp Y     &kp U        &kp I       &kp O       &kp P           &kp BSPC
-   &kp TAB   &hm LCTRL A &bhm LALT S &bhm LCMD D &bhm LSHFT F &kp G                                	                   &kp H     &bhm RSHFT J &bhm RCMD K &bhm RALT L &bhm RCTRL SEMI &kp SQT
-   &kp LSHFT &kp Z       &kp X       &kp C       &kp V        &kp B     &kp GRAVE &kp KP_ENTER     	  &kp HOME &kp END &kp N     &kp M        &kp COMMA   &kp DOT     &kp FSLH        &kp BSLH
-                                     &mo NAVI    &kp LCMD     &mo RAISE &kp SPACE &kp DEL          	  &kp TAB  &kp RET &mo LOWER &kp LBKT     &kp RBKT
+   &kp ESC      &kp Q       &kp W       &kp E       &kp R        &kp T                                	                   &kp Y     &kp U        &kp I       &kp O       &kp P           &kp BSPC
+   &qt BSPC TAB &hm LCTRL A &bhm LALT S &bhm LCMD D &bhm LSHFT F &kp G                                	                   &kp H     &bhm RSHFT J &bhm RCMD K &bhm RALT L &bhm RCTRL SEMI &kp SQT
+   &kp LSHFT    &kp Z       &kp X       &kp C       &kp V        &kp B     &kp GRAVE &kp KP_ENTER     	  &kp HOME &kp END &kp N     &kp M        &kp COMMA   &kp DOT     &kp FSLH        &kp BSLH
+                                        &mo NAVI    &kp LCMD     &mo RAISE &kp SPACE &kp DEL          	  &kp TAB  &kp RET &mo LOWER &kp LBKT     &kp RBKT
              >;
         };
 
