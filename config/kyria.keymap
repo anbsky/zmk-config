@@ -170,14 +170,14 @@
 
 		adjust_layer {
 // ---------------------------------------------------------------------------------------------------------------------------------
-// |  ESC  |BTCLR|  F2 |  F3  |  F4  | VOL_UP |                                                 | BT+ |      |      |      |     | BTCLR |
+// |  ESC  |BTCLR|  F2 |  F3  |  F4  | VOL_UP |                                                 | BT+ | BT0  |  BT1 |  BT2 | BT3 |  BT4  |
 // |  TAB  |BTNXT|     |      |      | VOL_DN |                                                 | BT- |  MUT | VDN  | VUP  |     |       |
-// | SHIFT |BTPRV|BTP1 | BTP2 | BTP3 |  MUTE  | L SHIFT | LOWER |           |         |         | BT0 |  BT1 |  BT2 |  BT3 |     |       |
+// | SHIFT |BTPRV|BTP1 | BTP2 | BTP3 |  MUTE  | L SHIFT | LOWER |           |         |         |     |      |      |      |     | BTCLR |
 //            |        |      |      |  SPACE |   ESC   |                   |         |         |     |      |      |
 			bindings = <
-	&kp ESC   &trans &trans &trans &trans &trans                                        &bt BT_NXT   &none        &none        &none        &none &bt BT_CLR
-	&kp LCTRL &trans &trans &trans &trans &trans                                        &bt BT_PRV   &kp C_MUTE   &kp C_VOL_DN &kp C_VOL_UP &none &none
-	&kp LSHFT &trans &trans &trans &trans &trans &trans  &trans           &trans &trans &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &none &none
+	&kp ESC   &trans &trans &trans &trans &trans                                        &bt BT_NXT   &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4
+	&kp LCTRL &trans &trans &trans &trans &trans                                        &bt BT_PRV   &kp C_MUTE   &kp C_VOL_DN &kp C_VOL_UP &none        &none
+	&kp LSHFT &trans &trans &trans &trans &trans &trans  &trans           &trans &trans &none        &none        &none        &none        &none        &bt BT_CLR
 	                        &trans &trans &trans &trans &trans            &trans &trans &trans &trans &trans
 			>;
 		};
